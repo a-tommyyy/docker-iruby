@@ -10,7 +10,7 @@ RUN apt-get install -y git \
       libczmq-dev \
       python3-pip
 RUN python3 -m pip install jupyter
-RUN gem install cztop iruby red-chainer
+RUN gem install cztop iruby red-chaine
 RUN iruby register --force
 
 RUN mkdir /work
