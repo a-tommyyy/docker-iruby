@@ -1,7 +1,7 @@
 FROM ruby:2.5.1
 
-RUN apt-get update -qq \
-      && apt-get install -y git \
+RUN apt-get update -qq
+RUN apt-get install -y git \
       libtool \
       libffi-dev \
       ruby-dev \
@@ -9,9 +9,9 @@ RUN apt-get update -qq \
       libzmq3-dev \
       libczmq-dev \
       python3-pip
-RUN python3 -m pip install jupyter \
-  && gem install cztop iruby red-chainer\
-  && iruby register --force
+RUN python3 -m pip install jupyter
+RUN gem install cztop iruby red-chainer
+RUN iruby register --force
 
 RUN mkdir /work
 WORKDIR /work
